@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function formcontrol(){
+            if (document.getElementById("kullaniciadi").value == ""){
+                alert("Kullanıcı adı alanı boş bırakılamaz");
+                document.uyelikformu.kullaniciadi.focus();
+                return;
+            }
+            if (document.getElementById("kullaniciadi").value!=""){
+                if(document.getElementById("kullaniciadi").value.length < 4 || document.getElementById("kullaniciadi").value.length>25){
+                    alert("Kullanıcı adı Minimum 4 Karakter Maksimum 25 Karakter Aralığında Olmalıdır");
+                    document.uyelikformu.kullaniciadi.value = "";
+                    document.uyelikformu.kullaniciadi.focus();
+                    return;
+                }
+            }
+            if (document.getElementById("kullanicisifresi").value == ""){
+                alert("Kullanıcı şifre alanı boş bırakılamaz");
+                document.uyelikformu.kullanicisifresi.focus();
+                return;
+            }
+            if (document.getElementById("kullanicisifresi").value!=""){
+                if(document.getElementById("kullanicisifresi").value.length < 4 || document.getElementById("kullaniciadi").value.length>25){
+                    alert("Kullanıcı şifresi Minimum 4 Karakter Maksimum 25 Karakter Aralığında Olmalıdır");
+                    document.uyelikformu.kullanicisifresi.value = "";
+                    document.uyelikformu.kullanicisifresi2.value = "";
+                    document.uyelikformu.kullanicisifresi.focus();
+                    return;
+                }
+            }
+            if (document.getElementById("kullanicisifresi2").value == ""){
+                alert("Kullanıcı şifre tekrarı alanı boş bırakılamaz");
+                document.uyelikformu.kullanicisifresi.focus();
+                return;
+            }
+            if (document.getElementById("kullanicisifresi2").value!=""){
+                if(document.getElementById("kullanicisifresi2").value.length < 4 || document.getElementById("kullaniciadi").value.length>25){
+                    alert("Kullanıcı şifresi tekrarı Minimum 4 Karakter Maksimum 25 Karakter Aralığında Olmalıdır");
+                    document.uyelikformu.kullanicisifresi.value = "";
+                    document.uyelikformu.kullanicisifresi2.value = "";
+                    document.uyelikformu.kullanicisifresi2.focus();
+                    return;
+                }
+            }
+            if (document.getElementById("kullanicisifresi").value!="" && document.getElementById("kullanicisifresi2").value!=""){
+                if (document.getElementById("kullanicisifresi").value!=document.getElementById("kullanicisifresi2").value){
+                    alert("İki şifre birbirinde farklı");
+                    document.uyelikformu.kullanicisifresi.value = "";
+                    document.uyelikformu.kullanicisifresi2.value = "";
+                    document.uyelikformu.kullanicisifresi.focus();
+                    return;
+                }
+            }
+            if (document.getElementById("kullaniciemail").value == ""){
+                alert("Kullanıcı E-mail alanı boş bırakılamaz");
+                document.uyelikformu.kullaniciemail.focus();
+                return;
+            }
+            if (document.getElementById("kullaniciemail").value!=""){
+                if (document.getElementById("kullaniciemail").value.indexOf("@", 0) == -1 || document.getElementById("kullaniciemail").value.indexOf(".", 0) == -1){
+                    alert("E-mail adrsi uygun değildir");
+                    document.uyelikformu.kullaniciemail.value = "";
+                    document.uyelikformu.kullaniciemail.focus();
+                    return;
+                }
+            }
+            
+            if (document.getElementsByName("cinsiyet")[0].checked==false && document.getElementsByName("cinsiyet")[1].checked==false){
+                alert("Cinsiyet alanı seçilmelidir");
+                return;
+            }
+
+            if (document.getElementsByName("hobiler")[0].checked == false && document.getElementsByName("hobiler")[1].checked == false && document.getElementsByName("hobiler")[2].checked == false && document.getElementsByName("hobiler")[3].checked == false){
+                alert(" En Az Bir Hobi Seçilmelidir");
+                return;
+            }
+
+            if (document.getElementById("not").value == ""){
+                alert("Not alanı boş bırakılamaz");
+                document.uyelikformu.not.focus();
+                return;
+            }
+            
+            
+            
+            document.uyelikformu.submit();
+
+        }
+    </script>
+</head>
+<body>
+    <form id="uyelikformu" name="uyelikformu" action="xxx.php" method="POST">
+        <table>
+            <tr>
+                <th colspan="3">ÜYELİK FORMU</th>
+            </tr>
+            <tr>
+                <td>Kullanı Adı</td>
+                <td>:</td>
+                <td><input type="text" id="kullaniciadi" name="kullaniciadi"></td>
+            </tr>
+            <tr>
+                <td>Kullanı Şifresi</td>
+                <td>:</td>
+                <td><input type="password" id="kullanicisifresi" name="kullanicisifresi"></td>
+            </tr>
+            <tr>
+                <td>Kullanı Şifresi Tekrar</td>
+                <td>:</td>
+                <td><input type="password" id="kullanicisifresi2" name="kullanicisifresi2"></td>
+            </tr>
+            <tr>
+                <td>E-mail Adresi</td>
+                <td>:</td>
+                <td><input type="email" id="kullaniciemail" name="kullaniciemail"></td>
+            </tr>
+            <tr>
+                <td>Cinsiyet</td>
+                <td>:</td>
+                <td><input type="radio" name="cinsiyet" id="cinsiyet1" value="erkek">Erkek <input type="radio" name="cinsiyet" id="cinsiyet2" value="kadın">Kadın</td>
+            </tr>
+            <tr>
+                <td>Hobiler</td>
+                <td>:</td>
+                <td><input type="checkbox" name="hobiler" id="hobiler" value="Alışveriş">Alışveriş<input name="hobiler" type="checkbox" id="hobiler2" value="Spor">Spor<input name="hobiler" type="checkbox" id="hobiler2" value="Kitap">Kitap<input name="hobiler" type="checkbox" id="hobiler3" value="Treking">Treking</td>
+            </tr>
+            <tr>
+                <td>Not</td>
+                <td>:</td>
+                <td><textarea name="not" id="not" cols="22" rows="3" style="resize: none;"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;"><input onclick="formcontrol()" type="button" value="GÖNDER"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

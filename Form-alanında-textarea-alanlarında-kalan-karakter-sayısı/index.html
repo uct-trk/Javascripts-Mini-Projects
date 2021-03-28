@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea onkeypress="ornek()" id="alan" style="width: 500px; height: 250px;"></textarea>
+    <div>Kullanılan Karakter Sayısı : <span id="kullanılankarakter">0</span></div>
+    <div>Kalan Karakter Sayısı : <span id="kalankarakter">250</span></div>
+    
+    <script>
+        var kullanilan = 0;
+        var kalan = 249;
+        function ornek(){
+            var baglan = document.getElementById("alan");
+            var uzunluk = baglan.value.length;
+            if (uzunluk >= kalan){
+                var deger = baglan.value;
+                var olustur = deger.substr(0, kalan);
+                document.getElementById("alan").value = olustur;
+                document.getElementById("kullanılankarakter").innerHTML = kalan + 1;
+                document.getElementById("kalankarakter").innerHTML = 0;
+            }else {
+            var deger = baglan.value;
+            var olustur = deger.substr(0, kalan);
+            document.getElementById("alan").value = olustur;
+            document.getElementById("kullanılankarakter").innerHTML = uzunluk + 1;
+            document.getElementById("kalankarakter").innerHTML = (kalan + 1) - (uzunluk + 1);
+            }
+        }
+    </script>
+</body>
+</html>

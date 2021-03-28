@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="sonuc"></div>
+    <div id="icerik">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis magnam impedit exercitationem quaerat
+        delectus harum iste? Dolore, officia. Saepe quisquam doloribus aut aliquam ex distinctio, nam accusamus
+        possimus! Ex ab omnis ea magnam pariatur reprehenderit tenetur explicabo velit officiis accusantium cumque ipsum
+        iure architecto laboriosam voluptates, asperiores, molestias debitis quod nulla eos saepe hic ad iste!
+        Architecto vero harum nulla sequi recusandae quam, minima quisquam explicabo a inventore temporibus consectetur
+        blanditiis aperiam ratione distinctio expedita voluptates nisi veniam tempore est dolores totam et dolorum
+        obcaecati. Totam aperiam esse doloribus quod voluptas corrupti distinctio labore, aliquid consequuntur suscipit
+        modi. Quis, aperiam libero corporis quos aliquid laboriosam tenetur deserunt expedita deleniti quam quia
+        similique repellendus doloribus impedit distinctio consectetur, perferendis labore tempore dolorem! Error a quia
+        perferendis, info@extraegitim.com odit, nesciunt maxime quis est aliquam dignissimos aperiam, impedit delectus inventore fugit
+        consequuntur non ab? Nobis labore totam magnam, quis cumque porro eligendi voluptatem quasi minima numquam!
+        Inventore eos unde dolorum dignissimos porro, minus ullam in eum architecto dolorem nulla tempore amet numquam
+        vero ipsum tempora. Facilis libero cumque aut! Doloribus ut laboriosam atque ipsum aliquid quod fuga impedit
+        aspernatur aliquam temporibus? Repellendus dicta explicabo laudantium, alias sit corrupti recusandae. Quo maxime
+        totam, qui quia necessitatibus eos voluptate veritatis officia omnis saepe delectus nisi illo minus! Soluta
+        dolor pariatur cupiditate aspernatur quibusdam harum facilis, deleniti amet qui ipsum modi eius eligendi!
+        Dignissimos tempora maxime quasi magnam ea quas voluptates unde tempore a, odio omnis sit assumenda fugit. Minus
+        dolor voluptate aliquam blanditiis perferendis. Tempore, itaque.</div>
+    <script>
+        var deger = document.getElementById("icerik").innerHTML;
+        var desen = /[A-Z0-9a-z_.-]+@[A-Z0-9a-z\-]+\.[A-Za-z]{2,3}/;
+        var sonuc = deger.match(desen);
+        document.getElementById("sonuc").innerHTML = sonuc;
+    
+    
+    </script>
+</body>
+
+</html>

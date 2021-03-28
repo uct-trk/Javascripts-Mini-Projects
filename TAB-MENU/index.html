@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        li{
+            display: inline;
+            height: 22px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            padding-left: 5px;
+            padding-right: 50px;
+            color: red;
+            border: 1px solid red;
+            margin: 0;
+        }
+        div{
+            height: 250px;
+            width: 502px;
+            margin-left: 40px;
+            padding: 5px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li onclick="goster('birincialan')" style="cursor: pointer;">Javascript eğitim seti</li>
+        <li onclick="goster('ikincialan')" style="cursor: pointer;">Php eğitim seti</li>
+        <li onclick="goster('ucuncualan')" style="cursor: pointer;">Html eğitim seti</li>
+    </ul>
+    
+    
+
+    <div id="birincialan">Javascript Tab'nın içeriği</div>
+
+    <div style="display: none;" id="ikincialan">Php Tab'nın içeriği</div>
+
+    <div style="display: none;" id="ucuncualan">Html Tab'nın içeriği</div>
+
+    <script>
+
+        function tumunugizle(){
+            var alanlar = document.getElementsByTagName("div");
+            var uzunluk = alanlar.length;
+            for(var baslangic = 0; baslangic < uzunluk; baslangic++){
+                alanlar[baslangic].style.display = "none";
+            }
+        }
+
+        function goster(deger){
+            tumunugizle();
+            document.getElementById(deger).style.display = "block";
+        }
+    </script>
+</body>
+</html>

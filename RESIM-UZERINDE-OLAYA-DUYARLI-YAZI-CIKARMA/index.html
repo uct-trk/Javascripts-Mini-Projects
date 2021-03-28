@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kapsamalani{
+            margin: 50px auto;
+            width: 500px; 
+            border: 3px double black; 
+            position: relative;
+        }
+
+        #metinalani{
+            width: 490px; 
+            height: 50px; 
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            background-color: black; 
+            opacity: .5;
+            color: yellow; 
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="kapsamalani" onmouseover="goster()" onmouseout="gızle()">
+        <img src="./about5.jpg" alt="İstanbul" width="500">
+        <div id="metinalani" style="display: none;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nobis commodi pariatur iure possimus sapiente hic suscipit enim, in placeat.</div>
+    </div>
+    <script>
+        function goster(){
+            document.getElementById("metinalani").style.display = "block";
+        }
+
+        function gızle(){
+            document.getElementById("metinalani").style.display = "none";
+        }
+    </script>
+</body>
+</html>

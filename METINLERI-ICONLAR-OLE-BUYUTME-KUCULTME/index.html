@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #kapsamaalani {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        #haberalani {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #baslikalani {
+            width: 900px;
+            float: left;
+            height: 60px;
+            text-align: left;
+
+        }
+
+        #iconalani {
+            width: 100px;
+            height: 45px;
+            padding-top: 15px;
+            float: left;
+            text-align: right;
+        }
+        #icerik{
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kapsamaalani">
+        <div id="haberalani">
+            <div id="baslikalani">
+                <h3>DENEME</h3>
+            </div>
+            <div id="iconalani">
+                <img style="cursor: pointer;" onclick="buyut()" src="./buyut.jpg" title="Metni büyüt">
+                <img style="cursor: pointer;" onclick="kucult()" src="./kucult.jpg" title="Metni küçült">
+            </div>
+            <hr>
+            <div id="icerik">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, molestias rem dolorem
+                voluptatem non aliquam voluptatibus quod tempora at consequuntur necessitatibus ex sed eius, nostrum
+                odit libero ipsam omnis, nisi unde blanditiis error eligendi accusamus eum! Quos odit aperiam quia
+                mollitia nostrum illo velit aliquid nulla error, quas, dolores similique! Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Magnam, velit nobis debitis, sit, sunt incidunt a atque officia
+                voluptatibus recusandae itaque excepturi earum! Illum quaerat recusandae quibusdam id possimus maiores.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam consequatur odio eum qui voluptas quam
+                voluptatibus doloremque, corrupti est. Tempora maxime voluptatem suscipit facere hic quasi cupiditate,
+                omnis sed aspernatur possimus, minima dolor vero doloremque sint! Aliquid, deleniti, dolorem ipsum
+                dolorum sint debitis vitae totam fugit voluptas sed iusto et esse autem obcaecati saepe voluptates?
+                Dolores magnam autem obcaecati. Ullam enim porro possimus sapiente earum sed corporis similique sequi
+                repudiandae natus amet asperiores ipsum impedit necessitatibus libero perferendis repellendus, magnam
+                debitis eum fuga iste! Nam vero modi expedita omnis sunt similique unde in quia, non fugit placeat nulla
+                quibusdam. Qui dolore placeat deserunt vitae id officia optio dolorem sunt commodi, odit eligendi, ea
+                hic quidem a quo corporis nobis consequatur eius ad. Nisi pariatur voluptas ipsum, odit excepturi illo
+                id omnis optio accusamus assumenda neque tempora veritatis quam voluptatum, accusantium dolor,
+                repudiandae adipisci minima. Odio fuga, ut eaque consectetur rerum maxime optio quas tenetur beatae
+                fugiat minima id corporis ipsa ullam inventore? Amet numquam sequi odio? Provident distinctio adipisci
+                perspiciatis dolore atque placeat corporis quaerat, tempora eligendi, sapiente, vitae in impedit? Culpa
+                officia quaerat consectetur debitis atque eveniet at saepe animi tempore aspernatur ea unde, voluptatem
+                illo natus molestias veniam cupiditate accusamus dolor excepturi! Qui animi sit sint aut, totam cum
+                molestias expedita veniam, unde laboriosam corrupti fuga sapiente temporibus eos quaerat! Dolore at
+                rerum, minima similique aliquid itaque, nobis in id dignissimos quas harum? Modi dolore, ea veritatis
+                sequi quas doloribus quisquam aperiam, hic odio mollitia amet reiciendis numquam.
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+var standart = 15;
+
+        function buyut(){
+            standart = standart + 1;
+            document.getElementById("icerik").style.fontSize = standart + "px";
+        }
+
+        function kucult(){
+            standart = standart - 1;
+            document.getElementById("icerik").style.fontSize = standart + "px"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="javascript:ornek('https://www.google.com.tr', 1000 , 650);">Google Git</a>
+    <script>
+
+        function ornek(adres, genislik, yukseklik){
+            var solhesap = parseInt((screen.availWidth/2) - (genislik/2));
+            var usthesap = parseInt((screen.availHeight/2) - (yukseklik/2));
+
+            var ozellikler = "width=" + genislik + ",height=" + yukseklik + ",left=" + solhesap + ",top=" + usthesap;
+
+            window.open("adres", "Google", "ozellikler")
+        }
+    </script>
+</body>
+</html>

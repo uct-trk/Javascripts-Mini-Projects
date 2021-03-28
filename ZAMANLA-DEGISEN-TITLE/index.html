@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sira = 1;
+        var metin1 = "Javascript";
+        var metin2 = "PHP";
+        var metin3 = "HTML";
+        var metin4 = "CSS";
+        var metin5 = "PYTHON";
+        var metin6 = "XML";
+
+        function ornek(){
+            if(sira == 1){
+                window.status = metin1;
+                document.title = metin1;
+                sira++;
+            } else if (sira == 2){
+                window.status = metin2;
+                document.title = metin2;
+                sira++;
+            } else if (sira == 3){
+                window.status = metin3;
+                document.title = metin3;
+                sira++;
+            } else if (sira == 4){
+                window.status = metin4;
+                document.title = metin4;
+                sira++;
+            } else if (sira == 5){
+                window.status = metin5;
+                document.title = metin5;
+                sira++;
+            } else if (sira == 6){
+                window.status = metin6;
+                document.title = metin6;
+                sira = 1;
+            }
+
+            window.setTimeout("ornek();",2000);
+        }
+        ornek();
+    </script>
+</body>
+</html>
