@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box1 {
+    height: 100vh;
+    background: url("./federico-di-dio-photography-ZUFmOYwiJXo-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.box2{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
