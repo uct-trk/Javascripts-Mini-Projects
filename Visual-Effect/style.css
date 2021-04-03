@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.earth {
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+h2{
+    text-align: center;
+}
+.intro-content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.intro-text{
+    width: 30%;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: 0.8s all ease-in-out;
+    
+}
+
+.intro-appear{
+    opacity: 1;
+    transform: translateY(80px);
+}
