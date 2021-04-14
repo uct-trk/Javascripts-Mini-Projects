@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-link{
+    margin: 0 0.7rem;
+}
+
+.banner{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*modal*/
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.54);
+}
+.modal form{
+    position: relative;
+    display: flex;
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: white;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+}
+#form-button{
+    background: #ff6378;
+    transition: all .3s ease;
+}
+#form-button:hover{
+    background: #fa5369;
+}
+
+.modal form input{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+#close-modal{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+    background: #ff6378;
+    color: white;
+    padding: 0.5rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1.5rem;
+
+}
+
+.text h1{
+    font-size: 5rem;
+}
+.text p{
+    margin: 2rem 0;
+}
+
+.text button {
+    border: 0;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: #6C63FF;
+    color: white;
+}
+
+.text button:hover{
+    background: #9f9aff;
+}
+#telefon{
+    animation: telefon-animasyonu 2s linear infinite;
+}
+
+@keyframes telefon-animasyonu{
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-0.5rem);
+    }
+    40%{
+        transform: translateY(-1rem);
+    }
+    70%{
+        transform: translateY(-1.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#parca1{
+    animation: parca-animasyonu1 2s linear infinite;
+}
+
+#parca2{
+    animation: parca-animasyonu 2s linear infinite;
+}
+
+#parca3{
+    animation: parca-animasyonu 2s linear infinite;
+}
+
+@keyframes parca-animasyonu{
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-0.5rem);
+    }
+    40%{
+        transform: translateY(-1rem);
+    }
+    70%{
+        transform: translateY(-1.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes parca-animasyonu1{
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-0.5rem);
+    }
+    40%{
+        transform: translateX(-1rem);
+    }
+    70%{
+        transform: translateX(-1.5rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
