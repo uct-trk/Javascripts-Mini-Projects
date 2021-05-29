@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <script>
+        var cart = [
+            {name: "muz", price: 1.99, amount: 5},
+            {name: "elma", price: 3.99, amount: 2},
+            {name: "armut", price: 5.99, amount: 1},
+        ]
+
+        cart.push({name: "kiraz", price: 5.80, amount: 7})
+
+        cart.map(i => console.log(i.name))
+        cart.map(i => console.log(i.price))
+        cart.map(i => console.log(i.amount))
+
+       cart.filter(i => i.amount === 5 && console.log(i.name))
+       cart.filter(i => i.amount === 2 && console.log(i.name))
+       cart.filter(i => i.amount === 1 && console.log(i.name))
+       cart.filter(i => i.amount === 7 && console.log(i.name))
+
+       
+        
+       
+    </script>
+        
+   
+</body>
+</html>

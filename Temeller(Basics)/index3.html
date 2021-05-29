@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    
+    
+    <script>
+        var cart = [];
+
+        const Item = function(name, price, count){
+            this.name = name
+            this.price = price
+            this.count = count
+        }
+        // Shopping Cart Functions
+
+        // addItemToCart(name, price, count)
+        function addItemToCart(name, price, count){
+            cart.filter(i => {
+                if(i.name === name){
+                    i.count += count;
+                    return
+                }
+                saveCart()
+            })
+            var item = new Item(name, price, count);
+            cart.push(item)
+        }
+        
+        addItemToCart("pear", 8, 5)
+        addItemToCart("pear", 8, 5)
+        addItemToCart("pear", 5, 5)
+        
+        console.log(cart[0])
+
+        // removeItemFromCart(name) --> remove 1 item
+        function removeItemFromCart(name) {
+          cart.filter(i => {
+              if(i.name === name){
+                  i.count --;
+                  if(i.count === 0){
+                      cart.splice(i, 1)
+                  }
+              }
+              saveCart()
+          })
+          
+        }        
+        removeItemFromCart("pear")
+        console.log(cart[0])
+
+
+        // removeItemFromCartAll(name) --> remove all items
+        /* function removeAllItemFromCart(name){
+            cart.filter(item => {
+                if (item.name === name) {
+                    item.count = 0;
+                }
+            })
+        }
+        removeAllItemFromCart("pear")
+        console.log(cart[0]) */
+
+        // clearCart
+        function clearCart(){
+            cart = []
+            saveCart()
+        }
+        clearCart()
+        
+
+        // array içerisindeki item sayısını veren fonksiyon
+        function countCart() {
+            cart.length
+        }
+        countCart()
+        console.log(cart)
+        
+        function totalCart(){
+           var totalCart = 0;
+           for (var i in cart){
+               totalCart += cart[i].price;
+           }
+           return totalCart;
+        }
+        console.log(totalCart())
+        
+        // list cart
+        function listCart(){
+            var cartCopy = [];
+            for (var i in cart){
+                var item = cart[i];
+                console.log("item: ",item)
+                var itemCopy = {};
+                for (var p in item) {
+                    itemCopy[p] = item[p];
+                }
+                cartCopy.push(itemCopy)
+            }
+            return cartCopy;
+        }
+        console.log(listCart())
+
+
+        // save localstorage
+        function saveCart(){
+            localStorage.setItem("shoppingCart", JSON.stringify(cart));
+        }
+        localStorage.setItem("username", "joe");
+
+        // loadCart
+        function loadCart(){
+            cart=JSON.parse(localStorage.getItem("shoppingCart"))
+        }
+        loadCart();
+
+    </script>
+</body>
+</html>

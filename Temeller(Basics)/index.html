@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Basics</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <script>
+        const cart = ["elma", "armut", "üzüm"]
+        cart.map((meyve1) => console.log(meyve1))
+
+        const product = {name: "muz", cost: 2.99, count: 5}
+        console.log(product)
+        console.log(product.name)
+        console.log(product.cost)
+        console.log(product.count)
+
+        // objec value array olarak döndürme
+        Object.values(product).map(item => console.log(String(item)))
+        // object keys array olarak döndürme
+        Object.keys(product).map(item => console.log(String(item)))
+    </script>
+</body>
+</html>
